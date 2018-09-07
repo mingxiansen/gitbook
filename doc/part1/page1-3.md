@@ -12,4 +12,4 @@
 
 ### 使用IDE
 - [ ] Pycharm   (IDE)
-你需要一个Pycharm
+你需要一个Pycharm!
