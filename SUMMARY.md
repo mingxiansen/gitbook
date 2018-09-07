@@ -3,7 +3,7 @@
 ## 实验室服务器使用指南
 <!-- ​~~食~~ -->
 
-* [实验环境配置](page1/README.md)
+* [实验环境配置](doc/page1/README.md)
     * [新建账号](page1/page1-1.md)
     * [配置python环境](part1/page1-2.md)
     * [使用服务器跑程序](part1/page1-3.md)
