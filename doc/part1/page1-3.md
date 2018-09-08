@@ -28,6 +28,7 @@ IDE(集成开发环境)可以提升我们的~~炼丹~~coding效率，有些IDE�
 ### 合适的IDE: Pycharm YES!!
 
 Python的IDE有很多，如若要选一个重量级的Python IDE，强烈推荐[Pycharm](http://www.jetbrains.com/pycharm/download)!!  
+
 ![pycharm-yes](../../img/page1/pycharm-yes.jpg)
 
 Pycharm一共有三种版本:
@@ -37,10 +38,6 @@ Pycharm一共有三种版本:
 | 社区版 | √ |  |  | 免费 |
 | **专业版** | √ | √ |  | 付费/**学生免费** |
 | 教育版 | √ | √ | √ | 付费/学生免费 |
-
-1.社区版 完全免费，但是不支持高级功能  
-2.专业版 付费/学生可免费使用 支持高级功能  
-3.教育版 与专业版相比增加了老师与学生互动的教学相关功能
 
 其中教学套件我们不需要，为了使用后面会介绍的远程调试，代码同步等功能，请下载 [**专业版**](http://www.jetbrains.com/pycharm/download/) ，然后通过学校邮箱[申请专业版的免费License ](http://www.jetbrains.com/student/)
 
@@ -59,15 +56,20 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;点击Pycharm菜单栏的"Tools"  
 -&gt;"Deployment"  
 -&gt;"Configuration"  
+
 ![sftp-settings](../../img/page1/sftp-settings.png)  
+
 之后会打开Deployment配置菜单  
 首先点击配置菜单左上角的"**+**"，添加一个Server  
 **Name** 填服务器的名称，自行选择  
 **Type** 选择**SFTP**  
+
 ![sftp-addServer](../../img/page1/sftp-addserver.png)
 
 确定后，进入刚才创建的Server的详细配置界面  
+
 ![sftp-addInfo](../../img/page1/sftp-addinfo.png)  
+
 按照红框从上到下顺序依次填入:  
 1.服务器IP  
 2.服务器代码文件夹路径
@@ -87,6 +89,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;"Deployment"  
 -&gt;"Options"  
 -&gt;"Upload changed files automatically to the default server"选项改为"Always"  
+
 ![sftp-autoupload](../../img/page1/sftp-autoupload.png)
 
 > P.S.  
@@ -106,7 +109,9 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;点击右侧界面中最右侧的齿轮按钮  
 -&gt;"Add Remote"  
 之后会看到如下图的python远程解释器配置界面  
+
 ![pycharm-interpreter-Settings](../../img/page1/pycharm-interpreter.png)  
+
 从上到下的红框是需要操作的部分:  
 首先切换到"**SSH Credentials**"，然后依次填入**服务器IP**，ubuntu账号**用户名**和**密码**，并且勾上保存密码  
 最后点击右下角的"..."选择解释器  
