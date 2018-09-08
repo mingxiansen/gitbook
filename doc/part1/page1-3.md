@@ -32,9 +32,6 @@ Python的IDE有很多，如若要选一个重量级的Python IDE，强烈推荐[
 
 ![pycharm-yes](../../img/part1/pycharm-yes.jpg)
 
-![tt](../../img/part1/tt.png)
-
-
 Pycharm一共有三种版本:
 
 | 版本 | 基础功能 | 高级功能 | 教学套件 | Price |
@@ -70,9 +67,17 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 
 ![sftp-添加Server](../../img/part1/sftp-addserver.png)
 
+
+![tt](../../img/part1/tt.png)
+
+
 确定后，进入刚才创建的Server的详细配置界面  
 
 ![sftp-补充Server详细信息](../../img/part1/sftp-addinfo.png)  
+
+
+![tt](../../img/part1/tt.png)
+
 
 按照红框从上到下顺序依次填入:  
 1.服务器IP  
