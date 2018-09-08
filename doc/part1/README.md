@@ -2,8 +2,8 @@
 
 ## 目录
 
-* [基础环境配置](README.md)
-  * [新建账号](page1-1.md)
+* [基础环境配置](doc/part1/README.md)
+  * [新建账号](doc/part1/page1-1.md)
   * [配置python环境](page1-2.md)
   * [使用服务器跑程序](page1-3.md)
   * [待施工](page1-4.md)
