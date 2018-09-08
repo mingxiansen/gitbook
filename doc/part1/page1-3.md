@@ -9,8 +9,8 @@
 
 借助SSH客户端,使用服务器资源跑程序,大致分以下几个步骤:  
 1.把需要运行的.py文件先用Winscp上传到服务器  
-2.启动SSE客户端\(Xshell\)连接到服务器  
-3.激活虚拟环境\(source ~/.../activate\)  
+2.启动SSE客户端(Xshell)连接到服务器  
+3.激活虚拟环境(source ~/.../activate)  
 4.python xx.py
 
 > 但是这样太麻烦了,我拒绝,下面介绍高级舒适的方法
@@ -27,8 +27,8 @@ IDE\(集成开发环境\)可以提升我们的~~炼丹~~coding效率,有些IDE�
 
 ### 合适的IDE: Pycharm YES!!
 
-Python的IDE有很多,如若要选一个重量级的Python IDE,强烈推荐[Pycharm](http://www.jetbrains.com/pycharm/download/#section=windows)!!  
-![pycharm-yes](../../.gitbook/assets/pycharm-yes.jpg)
+Python的IDE有很多,如若要选一个重量级的Python IDE,强烈推荐[Pycharm](http://www.jetbrains.com/pycharm/download)!!  
+![pycharm-yes](../../img/page1/pycharm-yes.jpg)
 
 Pycharm一共有三种版本:
 
@@ -59,15 +59,15 @@ Pycharm内置了同步工程文件的功能,我们来配置一下:
 -&gt;点击Pycharm菜单栏的"Tools"  
 -&gt;"Deployment"  
 -&gt;"Configuration"  
-![sftp-settings](../../.gitbook/assets/sftp-settings.png)  
+![sftp-settings](../../img/page1/sftp-settings.png)  
 之后会打开Deployment配置菜单  
 首先点击配置菜单左上角的"**+**",添加一个Server  
 **Name** 填服务器的名称,自行选择  
 **Type** 选择**SFTP**  
-![sftp-addServer](../../.gitbook/assets/sftp-addserver.png)
+![sftp-addServer](../../img/page1/sftp-addserver.png)
 
 确定后,进入刚才创建的Server的详细配置界面  
-![sftp-addInfo](../../.gitbook/assets/sftp-addinfo.png)  
+![sftp-addInfo](../../img/page1/sftp-addinfo.png)  
 按照红框从上到下顺序依次填入:  
 1.服务器IP  
 2.服务器代码文件夹路径
@@ -87,11 +87,11 @@ Pycharm内置了同步工程文件的功能,我们来配置一下:
 -&gt;"Deployment"  
 -&gt;"Options"  
 -&gt;"Upload changed files automatically to the default server"选项改为"Always"  
-![sftp-autoupload](../../.gitbook/assets/sftp-autoupload.png)
+![sftp-autoupload](../../img/page1/sftp-autoupload.png)
 
 > P.S.  
-> 代码同步功能可以配置多个Server\(见上图左侧栏\),但同时只能使用一个  
-> 具体使用哪个是通过Deployment界面左上角从左往右第四个按钮"![sftp-useasdefault](../../.gitbook/assets/sftp-useasdefault.png)**Use as Default**"进行调整的  
+> 代码同步功能可以配置多个Server(见上图左侧栏),但同时只能使用一个  
+> 具体使用哪个是通过Deployment界面左上角从左往右第四个按钮"![sftp-useasdefault](../../img/page1/sftp-useasdefault.png)**Use as Default**"进行调整的  
 > 当前正在使用的Server也会有加粗提示
 
 ### 配置远程python解释器
@@ -106,7 +106,7 @@ Pycharm内置了同步工程文件的功能,我们来配置一下:
 -&gt;点击右侧界面中最右侧的齿轮按钮  
 -&gt;"Add Remote"  
 之后会看到如下图的python远程解释器配置界面  
-![pycharm-interpreter-Settings](../../.gitbook/assets/pycharm-interpreter.png)  
+![pycharm-interpreter-Settings](../../img/page1/pycharm-interpreter.png)  
 从上到下的红框是需要操作的部分:  
 首先切换到"**SSH Credentials**",然后依次填入**服务器IP**,ubuntu账号**用户名**和**密码**,并且勾上保存密码  
 最后点击右下角的"..."选择解释器  
@@ -128,6 +128,5 @@ Pycharm内置了同步工程文件的功能,我们来配置一下:
 3.配置Pycharm代码同步  
 为了方便,请尽量把不同服务器里的Python虚拟环境和代码目录**保持一致** 想在不同不服务器运行.py程序时,只需要:  
 1.在"File"-&gt;"Settings"-&gt;"Project Interpreter"中切换Python远程解释器  
-2.在"Tools"-&gt;"Deployment"-&gt;"Configuration"中的左侧栏选择服务器,然后点击![sftp-useasdefault](../../.gitbook/assets/sftp-useasdefault.png)**Use as Default** 3.主动选择Upload上传代码  
+2.在"Tools"-&gt;"Deployment"-&gt;"Configuration"中的左侧栏选择服务器,然后点击![sftp-useasdefault](../../img/page1/sftp-useasdefault.png)**Use as Default** 3.主动选择Upload上传代码  
 4.运行
-

@@ -10,11 +10,11 @@
 首先确认Xshell登陆的是刚刚新建属于的**自己的账号**
 
 创建虚拟环境有2个参数可选:  
-1.$version,代表python的版本\(2.7/3.5/3.6/etc.\) 2.$dir,代表虚拟环境的目录
+1.$version,代表python的版本(2.7/3.5/3.6/etc.) 2.$dir,代表虚拟环境的目录
 
 > 安装虚拟环境的前提是机器上已经安装过了相应的python解释器
 
-在这个教程中我们创建**python3.5**的虚拟环境,并且放在用户根目录的**py35env**下\(~/py35env\)
+在这个教程中我们创建**python3.5**的虚拟环境,并且放在用户根目录的**py35env**下(~/py35env)
 
 选择好参数之后,使用命令  
 `virtualenv -p $version $dir`  
@@ -42,10 +42,11 @@ nano ~/.config/pip/pip.config
 
 以上命令会打开文本编辑器,把下面的文字复制进去--&gt;Ctrl+X--&gt;y--&gt;回车,即可完成保存
 
-> \[global\]  
-> index-url = [https://pypi.tuna.tsinghua.edu.cn/simple](https://pypi.tuna.tsinghua.edu.cn/simple)
+>[global]  
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+
+
 
 之后pip都会从清华下载包,速度快,不需要登录网关联网
 
 > 东南部的学校可以优先考虑[中科大pip源](https://lug.ustc.edu.cn/wiki/mirrors/help/pypi)
-
