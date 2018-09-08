@@ -1,9 +1,6 @@
-# Table of contents
 # 实验室资源使用快速通关教程
 
 ## 总目录
-
-* [实验环境配置](doc/README.md)
 
 * 基础环境配置
   * [新建账号](doc/part1/page1-1.md)
