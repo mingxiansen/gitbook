@@ -2,13 +2,13 @@
 
 ## 目录
 
-* [基础环境配置](doc/part1/README.md)
-  * [新建账号](doc/part1/page1-1.md)
-  * [配置python环境](page1-2.md)
-  * [使用服务器跑程序](page1-3.md)
-  * [待施工](page1-4.md)
+* [基础环境配置](part1/README.md)
+  * [新建账号](part1/page1-1.md)
+  * [配置python环境](part1/page1-2.md)
+  * [使用服务器跑程序](part1/page1-3.md)
+  * [待施工](part1/page1-4.md)
 * 显卡加速环境配置
-    * [待施工](page1-1.md)
+    * [待施工](part2/page1-1.md)
 
 ## 介绍
 

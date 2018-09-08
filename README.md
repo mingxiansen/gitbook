@@ -2,7 +2,7 @@
 
 ## 总目录
 
-* [实验环境配置](doc/part1/README.md)
+* [实验环境配置](doc/README.md)
 
 
 ## Contact Us
