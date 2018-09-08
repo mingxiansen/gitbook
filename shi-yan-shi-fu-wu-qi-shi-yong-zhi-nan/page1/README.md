@@ -12,7 +12,7 @@
 
 这个教程主要是针对以下的情况:
 
-* 你在本地有台电脑\(系统任意\)
+* 你在本地有台电脑(系统任意)
 * 有一台高性能服务器\(ubuntu\)可供使用
 
 内容主要包括:
@@ -33,4 +33,3 @@
 提问、纠错、等小问题，请提交 [issues](https://github.com/mingxiansen/gitbook/issues)
 
 修改、提交文章等请先fork [repo](https://github.com/mingxiansen/gitbook)然后提交pull request
-
