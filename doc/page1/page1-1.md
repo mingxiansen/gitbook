@@ -17,7 +17,9 @@ Xshell-6是付费软件,但是提供免费教育版本,需要填写学校邮箱�
 ![create_session](../../img/page1/xshell-create_session.png)
 
 完成之后,点击确定,回到"会话"界面就会看到新建的连接.  
-![session_list](../../img/page1/xshell-session_list.png)  
+
+![session_list](../../img/page1/xshell-session_list.png)
+
 双击之后,进入填写用户的界面,填入有管理员权限账号的用户名->确定->填密码->确定.  
 看到`name@xxx:~$` 就说明登录成功了.
 >这里的name表示的是管理员账号的用户名
@@ -66,6 +68,8 @@ Xshell-6是付费软件,但是提供免费教育版本,需要填写学校邮箱�
 1."主机名":填入服务器的IP  
 2."用户名和密码":填入刚刚新建账户的用户名和密码  
 3.点击保存和登录  
+
 ![winscp](../../img/page1/winscp.png)  
+
 Winscp的左侧是本地文件,右侧是服务器文件  
 软件提供了可视化的上传下载操作,简单易上手,具体细节就不再多说了  
