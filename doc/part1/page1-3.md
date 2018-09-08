@@ -29,7 +29,7 @@ IDE(集成开发环境)可以提升我们的~~炼丹~~coding效率，有些IDE�
 
 Python的IDE有很多，如若要选一个重量级的Python IDE，强烈推荐[Pycharm](http://www.jetbrains.com/pycharm/download)!!  
 
-![pycharm-yes](../../img/page1/pycharm-yes.jpg)
+![pycharm-yes](../../img/part1/pycharm-yes.jpg)
 
 Pycharm一共有三种版本:
 
@@ -57,18 +57,18 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;"Deployment"  
 -&gt;"Configuration"  
 
-![sftp-settings](../../img/page1/sftp-settings.png)  
+![sftp-设置](../../img/part1/sftp-settings.png)  
 
 之后会打开Deployment配置菜单  
 首先点击配置菜单左上角的"**+**"，添加一个Server  
 **Name** 填服务器的名称，自行选择  
 **Type** 选择**SFTP**  
 
-![sftp-addServer](../../img/page1/sftp-addserver.png)
+![sftp-添加Server](../../img/part1/sftp-addserver.png)
 
 确定后，进入刚才创建的Server的详细配置界面  
 
-![sftp-addInfo](../../img/page1/sftp-addinfo.png)  
+![sftp-补充Server详细信息](../../img/part1/sftp-addinfo.png)  
 
 按照红框从上到下顺序依次填入:  
 1.服务器IP  
@@ -90,7 +90,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;"Options"  
 -&gt;"Upload changed files automatically to the default server"选项改为"Always"  
 
-![sftp-autoupload](../../img/page1/sftp-autoupload.png)
+![sftp-设置自动上传](../../img/part1/sftp-autoupload.png)
 
 > P.S.  
 > 代码同步功能可以配置多个Server(见上图左侧栏)，但同时只能使用一个  
@@ -110,7 +110,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 -&gt;"Add Remote"  
 之后会看到如下图的python远程解释器配置界面  
 
-![pycharm-interpreter-Settings](../../img/page1/pycharm-interpreter.png)  
+![pycharm-设置远程解释器](../../img/part1/pycharm-interpreter.png)  
 
 从上到下的红框是需要操作的部分:  
 首先切换到"**SSH Credentials**"，然后依次填入**服务器IP**，ubuntu账号**用户名**和**密码**，并且勾上保存密码  
@@ -133,5 +133,5 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 3.配置Pycharm代码同步  
 为了方便，请尽量把不同服务器里的Python虚拟环境和代码目录**保持一致** 想在不同不服务器运行.py程序时，只需要:  
 1.在"File"-&gt;"Settings"-&gt;"Project Interpreter"中切换Python远程解释器  
-2.在"Tools"-&gt;"Deployment"-&gt;"Configuration"中的左侧栏选择服务器，然后点击![sftp-useasdefault](../../img/page1/sftp-useasdefault.png)**Use as Default** 3.主动选择Upload上传代码  
+2.在"Tools"-&gt;"Deployment"-&gt;"Configuration"中的左侧栏选择服务器，然后点击![sftp-useasdefault](../../img/part1/sftp-useasdefault.png)**Use as Default** 3.主动选择Upload上传代码  
 4.运行
