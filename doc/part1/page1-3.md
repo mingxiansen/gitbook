@@ -32,6 +32,9 @@ Python的IDE有很多，如若要选一个重量级的Python IDE，强烈推荐[
 
 ![pycharm-yes](../../img/part1/pycharm-yes.jpg)
 
+![tt](../../img/part1/tt.png)
+
+
 Pycharm一共有三种版本:
 
 | 版本 | 基础功能 | 高级功能 | 教学套件 | Price |
