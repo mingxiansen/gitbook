@@ -65,7 +65,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 **Name** 填服务器的名称，自行选择  
 **Type** 选择**SFTP**  
 
-![sftp-添加Server](../../img/part1/sftp-addserver.png)
+![sftp-添加Server](../../img/part1/sftp-addserver.png)  
 
 确定后，进入刚才创建的Server的详细配置界面  
 
