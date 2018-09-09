@@ -2,8 +2,8 @@
 
 ### 目录
 
-* 从零开始的tensorflow生活
-  * [了解相关软件](page2-1.md)
+* GPU加速环境配置
+  * [GPU加速相关软件介绍](page2-1.md)
   * [CUDA及相关软件的安装](page2-2.md)
 
 

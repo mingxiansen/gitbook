@@ -17,7 +17,7 @@
 - 方法1:  
   登录服务器的桌面进行操作,出错的情况比较少,推荐
   首先确定服务器配置好[ubuntu清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)或其他国内源后  
-  进桌面->软件和更新->附加驱动->选择使用nvidia专用驱动->应用设置->等待安装完成
+  进桌面->软件和更新->附加驱动->选择使用nvidia专用驱动->应用设置->等待安装完成  
 
 - 方法2:
     从[nvidia官网](https://www.nvidia.cn/Download/index.aspx?lang=cn)下载驱动，手动安装
@@ -32,7 +32,8 @@
     sudo sh ./NVIDIA-Linux-*.run(官方驱动的.run文件) -no-x-check -no-nouveau-check -no-opengl-files  
     # 重新启动显示服务
     sudo service lightdm restart
-    ```
+    ```  
+
 - 方法3:
    使用cuda.run中自带的驱动
    具体方法后面会介绍到
