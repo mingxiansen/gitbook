@@ -1,10 +1,10 @@
 # Table of contents
+
 * [首页](README.md)
 * [基础环境配置](doc/part1/README.md)
-  * [新建账号](doc/part1/page1-1.md)
+  * [新建服务器账号](doc/part1/page1-1.md)
   * [配置python环境](doc/part1/page1-2.md)
   * [使用服务器跑程序](doc/part1/page1-3.md)
-  * [待施工](doc/part1/page1-4.md)
 * [GPU加速环境配置](doc/part2/README.md)
   * [了解相关软件](doc/part2/page2-1.md)
   * [CUDA及相关软件的安装](doc/part2/page2-2.md)
@@ -17,8 +17,10 @@
 ### 介绍
 
 这个教程主要是写给新来实验室的童鞋,帮助大家尽快上手使用服务器  
+
 第一部分是介绍使用服务器的基础操作  
 第二部分是介绍如何使用服务器上的GPU   
+
 大家可以根据自己的情况酌情选择章节
 
 

@@ -1,6 +1,6 @@
 # 配置python环境
 
-不同Python程序依赖于不同的包，服务器也被很多人同时使用，为了使不同账户和不同Python环境之间不互相影响，我们需要创建Python虚拟环境
+实验室的服务器被很多人同时使用，每个人跑程序需要依赖一套python环境,每个人使用自己的Python虚拟环境可以避免跟其他人互相影响
 
 > 创建Python虚拟环境需要virtualenv的支持，现在实验室的服务器都带有这个软件  
 > 如果提示找不到virtualenv，请切换成管理员账户自行安装
@@ -16,17 +16,19 @@
 > 安装虚拟环境的前提是机器上已经安装过了相应的python解释器
 
 在这个教程中我们创建**python3.5**的虚拟环境，并且放在用户根目录的**py35env**下(~/py35env)
-
+`~`的意思是用户根目录,举个例子,如果你的用户名是`username`,那么`~`代表的就是`/home/username`  
 选择好参数之后，使用命令  
 `virtualenv -p $version $dir`  
-创建虚拟环境 根据本次教程的选择，输入以下命令创建虚拟环境:  
-`virtualenv -p $python3.5 ~/py35env`  
-创建完成后，在虚拟环境的目录中bin文件夹下，会生成一个脚本:activate  
-输入命令`source ~/py35env/bin/activate`可以激活虚拟环境  
+创建虚拟环境 根据本次教程的选择，输入以下命令创建一个存放在~/py35env的python3.5版本的虚拟环境:  
+`virtualenv -p python3.5 ~/py35env`  
+创建完成后，在虚拟环境的目录中bin文件夹下，会生成一个脚本:**activate**  
+输入命令  
+`source ~/py35env/bin/activate`  
+可以激活虚拟环境  
 如果`(py35env)`作为前缀出现在了命令行前说明激活成功，此时输入`deactivate`可以退出激活环境
 
 > 处于激活状态时:  
-> 1.python只会安装在这个虚拟环境中  
+> 1.pip默认会把python包安装在这个虚拟环境中  
 > 2.默认使用这个虚拟环境中的python解释器运行代码
 
 ## 修改pip源

@@ -23,14 +23,14 @@ IDE(集成开发环境)可以提升我们的~~炼丹~~coding效率，有些IDE�
 > **代码同步** 可以把本机的代码传到服务器  
 > **远程调试** 可以启动服务器端的Python解释器运行同步过去的代码
 
-凭借这些功能我们就可以不离开本机的IDE使用服务器资源  
+凭借这些功能我们就可以不离开本机的IDE只靠鼠标点点点使用服务器资源  
 下面为大家推荐一个好用的Python IDE
 
 ### 合适的IDE: Pycharm YES!!
 
 Python的IDE有很多，如若要选一个重量级的Python IDE，强烈推荐[Pycharm](http://www.jetbrains.com/pycharm/download)!!  
 
-![pycharm-yes](../../img/part1/pycharm-yes.jpg)
+![pycharm-yes!](../../img/part1/pycharm-yes.jpg)
 
 Pycharm一共有三种版本:
 
@@ -44,7 +44,7 @@ Pycharm一共有三种版本:
 
 ### 使用Pycharm
 
-初次打开Pycharm需要自行设置:  
+初次打开Pycharm,需要自行设置:  
 1.创建python project，并且指定工程的存放目录  
 2.顺便再选择一下本机的Python解释器  
 整个过程比较简单，就不说了
@@ -65,11 +65,13 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 **Name** 填服务器的名称，自行选择  
 **Type** 选择**SFTP**  
 
-![sftp-添加Server](../../img/part1/sftp-addserver.png)  
+<!-- ![sftp-添加Server](../../img/part1/sftp-addserver.png)   -->
+![sftp-设置](../../img/part1/sftp-settings.png)
 
 确定后，进入刚才创建的Server的详细配置界面  
 
-![sftp-补充Server详细信息](../../img/part1/sftp-addinfo.png)  
+<!-- ![sftp-补充Server详细信息](../../img/part1/sftp-addinfo.png)   -->
+![sftp-设置](../../img/part1/sftp-settings.png) 
 
 按照红框从上到下顺序依次填入:  
 1.服务器IP  

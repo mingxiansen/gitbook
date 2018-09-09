@@ -3,7 +3,7 @@
 ### 目录
 
 * 基础环境配置
-  * [新建账号](page1-1.md)
+  * [新建服务器账号](page1-1.md)
   * [配置python环境](page1-2.md)
   * [Pycharm介绍](page1-3.md)
 
