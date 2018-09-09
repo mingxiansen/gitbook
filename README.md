@@ -1,7 +1,5 @@
-
 # Table of contents
 
-* [实验室资源使用快速通关教程](README.md)
 
 ### 总目录
 
