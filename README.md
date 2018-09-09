@@ -31,6 +31,3 @@
 提问、纠错、等小问题，请提交 [issues](https://github.com/mingxiansen/gitbook/issues)
 
 修改、提交文章等请先fork [repo](https://github.com/mingxiansen/gitbook)然后提交pull request
-
-* [GPU加速环境配置](doc/part2/README.md)
-    * [待施工](doc/part2/page2-1.md)
