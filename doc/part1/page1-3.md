@@ -44,7 +44,7 @@ Pycharm一共有三种版本:
 
 ### 使用Pycharm
 
-初次打开Pycharm,需要自行设置:  
+初次打开Pycharm，需要自行设置:  
 1.创建python project，并且指定工程的存放目录  
 2.顺便再选择一下本机的Python解释器  
 整个过程比较简单，就不说了
