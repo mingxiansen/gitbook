@@ -1,9 +1,7 @@
-
-* 实验室资源使用快速通关教程
-
-
-### 总目录
-
+# Table of contents
+* [实验室资源使用快速通关教程](README.md)
+  * [基础环境配置](doc/part1/README.md)
+  * [新建账号](doc/part1/page1-1.md)
 * [基础环境配置](doc/part1/README.md)
   * [新建账号](doc/part1/page1-1.md)
   * [配置python环境](doc/part1/page1-2.md)
@@ -12,6 +10,10 @@
 * [GPU加速环境配置](doc/part2/README.md)
   * [了解相关软件](doc/part2/page2-1.md)
   * [CUDA及相关软件的安装](doc/part2/page2-2.md)
+
+<!-- ### 总目录 -->
+
+
 
 
 ### 介绍
