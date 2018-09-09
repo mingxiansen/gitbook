@@ -93,13 +93,11 @@
   (y)es/(n)o/(q)uit:
   ```
 
-  问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入  
-
+  问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入 **`y`**    
   ```
   Enter Toolkit Location
   [ default is /usr/local/cuda-9.0 ]:
   ```
-
   问你想把CUDA装在哪里,重点来了,这里是第一个**新人操作,老人心碎**的地方  
   在选择安装路径之前,请务必确认这个路径还**不存在**(可以用Winscp切换到服务器/usr/local目录下面看看),避免把之前别人安装的CUDA覆盖了  
   另外,因为CUDA和cuDNN是绑定的,需要版本互相匹配,这里建议安装目录同时表示CUDA和cuDNN的版本,比如我这里准备装**CUDA-9.0**和与之配套的**cuDNN-7.1**,那我选的安装目录就是/usr/local/cuda9.0-cudnn7.1  
