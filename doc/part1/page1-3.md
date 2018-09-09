@@ -94,9 +94,9 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 ![sftp-设置自动上传](../../img/part1/sftp-autoupload.png)
 
 > P.S.  
-> 代码同步功能可以配置多个Server(见上图左侧栏)，但同时只能使用一个  
-> 具体使用哪个是通过Deployment界面左上角从左往右第四个按钮"![sftp-useasdefault](../../img/page1/sftp-useasdefault.png)**Use as Default**"进行调整的  
-> 当前正在使用的Server也会有加粗提示
+ 代码同步功能可以配置多个Server(见上图左侧栏)，但同时只能使用一个  
+ 具体使用哪个是通过Deployment界面左上角从左往右第四个按钮"![sftp-useasdefault](../../img/part1/sftp-useasdefault.png)**Use as Default**"进行调整的  
+ 当前正在使用的Server也会有加粗提示
 
 ### 配置远程python解释器
 
