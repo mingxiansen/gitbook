@@ -93,7 +93,7 @@
   (y)es/(n)o/(q)uit:
   ```
 
-  问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入 **`y`**  
+  问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入  
 
   ```
   Enter Toolkit Location
