@@ -1,4 +1,7 @@
-# 实验室资源使用快速通关教程
+
+# Table of contents
+
+* [实验室资源使用快速通关教程](README.md)
 
 ### 总目录
 
@@ -10,7 +13,6 @@
 * [GPU加速环境配置](doc/part2/README.md)
   * [了解相关软件](doc/part2/page2-1.md)
   * [CUDA及相关软件的安装](doc/part2/page2-2.md)
-  * [多版本CUDA的使用](doc/part2/page2-3.md)
 
 
 ### 介绍
