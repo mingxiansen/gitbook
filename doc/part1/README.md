@@ -6,7 +6,6 @@
   * [新建账号](page1-1.md)
   * [配置python环境](page1-2.md)
   * [Pycharm介绍](page1-3.md)
-  * [待施工](page1-4.md)
 
 ## 介绍
 
