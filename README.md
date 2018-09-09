@@ -1,7 +1,7 @@
 # Table of contents
-* [实验室资源使用快速通关教程](README.md)
+<!-- * [实验室资源使用快速通关教程](README.md)
   * [基础环境配置](doc/part1/README.md)
-  * [新建账号](doc/part1/page1-1.md)
+  * [新建账号](doc/part1/page1-1.md) -->
 * [基础环境配置](doc/part1/README.md)
   * [新建账号](doc/part1/page1-1.md)
   * [配置python环境](doc/part1/page1-2.md)
