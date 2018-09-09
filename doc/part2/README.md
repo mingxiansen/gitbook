@@ -4,7 +4,7 @@
 
 * 从零开始的tensorflow生活
   * [了解相关软件](page2-1.md)
-  * [CUDA相关的安装](page2-2.md)
+  * [CUDA及相关软件的安装](page2-2.md)
   * [多版本CUDA的使用](page2-3.md)
 
 ## 介绍

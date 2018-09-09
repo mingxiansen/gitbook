@@ -42,10 +42,10 @@ nano ~/.config/pip/pip.config
 ```
 
 以上命令会打开文本编辑器，把下面的文字复制进去--&gt;Ctrl+X--&gt;y--&gt;回车，即可完成保存
-
->[global]  
+```
+[global]  
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
-
+```
 
 
 之后pip都会从清华下载包，速度快，不需要登录网关联网
