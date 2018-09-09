@@ -16,12 +16,12 @@
 如果提示找不到驱动或GPU设备,再请继续参考下面的安装教程.
 
 总共介绍NVIDIA显卡驱动的三种方法,推荐使用第一种：
-#####方法1:  
+#####方法1:GUI操作  
   登录服务器的桌面进行操作,出错的情况比较少,推荐
   首先确定服务器配置好[ubuntu清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)或其他国内源后  
   进桌面->软件和更新->附加驱动->选择使用nvidia专用驱动->应用设置->等待安装完成  
 
-#####方法2:
+#####方法2:官网下载,手动安装
     从[nvidia官网](https://www.nvidia.cn/Download/index.aspx?lang=cn)下载驱动，手动安装
     使用Xshell连入服务器,登录**有管理员权限的账户**,依次输入下面的命令
     ```
@@ -36,7 +36,7 @@
     sudo service lightdm restart
     ```  
 
-#####方法3:
+#####方法3:安装CUDA时顺便安装
    使用cuda.run中自带的驱动
    具体方法后面会介绍到
 
@@ -52,7 +52,7 @@
 
 本次教程以安装CUDA-9.0和cuDNN7.1为例,如果要安装其他版本,请注意进行适当的改动(下载的文件,命令中的文件名等)
 
-1. **下载CUDA**
+#####下载CUDA
   首先去[这里](https://developer.nvidia.com/cuda-toolkit-archive)找到要安装的CUDA版本,点进去进入下图所示的下载界面
 
   ![CUDA-9.0下载界面](../../img/part2/cuda-downloadpage.png)
@@ -61,7 +61,7 @@
   图中下方1.6GB的文件是CUDA9.0的本体,还有后面的Patch也要全部下载下来.可能你选择的CUDA版本没有提供额外的Patch下载,那就不用下载了.另外下载前可能需要注册账号登录(我不太清楚了).
 
 
-2. **安装CUDA**
+#####安装CUDA
   把下载好的CUDA本体和Patch用Winscp上传到服务器,放到用户根目录下(~/)即可  
   然后使用Xshell连入服务器,登录**有管理员权限的账户**  
   输入下面的命令
@@ -72,16 +72,19 @@
 
   之后会让你输入一遍管理员的密码
   这时候回看到安装前的说明,我们就不看了,按住"空格键"会不断往下翻页,到达100%后松手,会看到:  
+
   ```
   Do you accept the previously read EULA?  
   accept/decline/quit:
   ```
+
   问是否同意上面的条款,输入 **`accept`**  
 
   ```
   Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81?
   (y)es/(n)o/(q)uit:
   ```
+
   问是否需要安装CUDA安装包内自带的驱动,这里的版本号是384,默认情况输入 **`n`**  
   如果你确定服务器没装NVIDIA驱动,而且想通过这种方式安装,可以输入`y`  
 
@@ -89,12 +92,14 @@
   Install the CUDA 9.0 Toolkit?
   (y)es/(n)o/(q)uit:
   ```
+
   问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入 **`y`**  
 
   ```
   Enter Toolkit Location
   [ default is /usr/local/cuda-9.0 ]:
   ```
+
   问你想把CUDA装在哪里,重点来了,这里是第一个**新人操作,老人心碎**的地方  
   在选择安装路径之前,请务必确认这个路径还**不存在**(可以用Winscp切换到服务器/usr/local目录下面看看),避免把之前别人安装的CUDA覆盖了  
   另外,因为CUDA和cuDNN是绑定的,需要版本互相匹配,这里建议安装目录同时表示CUDA和cuDNN的版本,比如我这里准备装**CUDA-9.0**和与之配套的**cuDNN-7.1**,那我选的安装目录就是/usr/local/cuda9.0-cudnn7.1  
@@ -104,6 +109,7 @@
   Do you want to install a symbolic link at /usr/local/cuda?
   (y)es/(n)o/(q)uit:
   ```
+
   问是否需要给才那个目录建一个快捷方式到/usr/local/cuda,建议选 **`n`**  
   选y不仅容易把之前别人的快捷方式改掉,如果你自己依赖这个快捷方式,你又得担心别被后面的人改掉,还是算了  
 
@@ -111,6 +117,7 @@
   Install the CUDA 9.0 Samples?
   (y)es/(n)o/(q)uit:
   ```
+
   问是否需要安装CUDA的测试样例,不需要,我们之后会用机器学习框架的程序测试,选 **`n`**  
 
   之后等待安装完成即可  
@@ -124,7 +131,7 @@
 
   这是CUDA告诉我们,虽然CUDA文件安装成功了,但是需要你自行设置两个系统变量 **\$PATH** 和 **\$LD_LIBRARY_PATH** ,我们先安装cuDNN,稍后设置这个
 
-3. **安装cuDNN**
+#####安装cuDNN
   严格来说不算是"安装",我们只需要吧cuDNN复制到CUDA目录下就好  
   那么首先[点这里](https://developer.nvidia.com/rdp/cudnn-archive)下载对应版本的cudnn,没记错的话需要注册个账号,填一个问卷才能下载  
   需要注意的是cuDNN的版本也需要跟你安装的CUDA匹配,我们之前说要安装CUDA9.0和cuDNN7.1,所以我选择  
@@ -143,7 +150,7 @@
    和/usr/local/cuda9.0-cudnn7.1/表示CUDA文件所在目录  
    请根据自己的情况酌情修改  
 
-4. **设置系统变量**(根据情况选择)
+#####设置系统变量(根据情况选择)
    恭喜,完成上面的123步骤,你已经成功把CUDA和cuDNN安装到了服务器上,但是使用.run文件安装CUDA和cuDNN之后,机器学习框架(tensorflow/pytorch等)不能知道它们的所在位置,还需要你继续设置一下系统变量.
 
    软件读取系统变量的方式,稍微有些复杂,简单来说,系统变量由两个文件控制:
