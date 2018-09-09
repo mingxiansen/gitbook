@@ -123,6 +123,13 @@
   注意看最后的说明,是安装完成,还是中途失败,如果只有一点警告,一般不是很影响
   >安装完成后,有时会提醒Incomplete installation,提示NVIDIA驱动版本太低,这时候你只需要用nvidia-smi确认下版本号,如果足够的话,不用理会,如果真的低于提示值,那就需要安装高一点的版本再来装CUDA
 
+  注意,安装结束之后你应该会看到如下的提醒:
+  >Please make sure that
+    -   PATH includes /usr/lcoal/cuda9.0-cudnn7.1/bin
+    -   LD_LIBRARY_PATH includes /usr/lcoal/cuda9.0-cudnn7.1/lib64
+
+  这是CUDA告诉我们,虽然CUDA文件安装成功了,但是需要你自行设置两个系统变量 **\$PATH** 和 **\$LD_LIBRARY_PATH** ,我们先安装cuDNN,稍后设置这个
+
 3.安装cuDNN
   严格来说不算是"安装",我们只需要吧cuDNN复制到CUDA目录下就好  
   那么首先[点这里](https://developer.nvidia.com/rdp/cudnn-archive)下载对应版本的cudnn  
@@ -144,23 +151,44 @@
    请根据自己的情况酌情修改
 
 4. 设置系统变量(根据情况选择)
-   恭喜,完成上面的123步骤,你已经成功吧CUDA和cuDNN安装到了服务器上,但是CUDA和cuDNN不会主动告诉其他软件它们的所在位置,需要你设置系统变量,来告知其他软件(比如机器学习框架)CUDA和cuDNN的文件位置
+   恭喜,完成上面的123步骤,你已经成功吧CUDA和cuDNN安装到了服务器上,但是使用.run文件安装CUDA和cuDNN之后,机器学习框架(tensorflow/pytorch等)不能知道它们的所在位置,需要你设置以下两个系统变量:
 
-  - (1)针对所有用户--重启生效
-    ```
-    sudo nano /etc/profile
-    文件末尾追加
-    export PATH=/usr/local/cuda-8.0/bin:$PATH
-    export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
-    重启生效
-    ```
-  - (2)针对自己
-    ```
-    sudo nano ~/.bashrc
-    文件末尾追加
-    export PATH=/usr/local/cuda-8.0/bin:$PATH
-    export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
-    保存退出
-    source ~/.bashrc
-    立即生效生效
-    ```
+   软件读取系统变量的方式,稍微有些复杂,简单来说,系统变量由两个文件控制
+   - 第一个文件在`/etc/profile`,它的影响范围是所有用户,所以一般不建议修改这个文件,除非你是第一个使用服务器的人,你想让后面的人默认有CUDA可以用,才建议修改这个文件
+
+   - 第二个文件在`~/.bashrc`,它的影响范围是单个用户,一般建议修改这个文件  
+   `~`的意思是用户根目录,举个例子,如果你的用户名是`username`,那么`~`代表的就是'/home/username',根据这个路径我们可以知道这个每个用户都有一个属于自己的`.bashrc`
+
+   请你根据自己的情况选择修改哪个文件,如果要修改`/etc/profile`,请使用管理员帐号操作,并且要在修改的命令前加`sudo`
+
+   添加系统变量的方法:
+   首先输入下面的命令,打开文件编辑界面:
+   `nano .bashrc`
+   或
+   `sudo nano /etc/profile`
+   然后把下面的内容复制到文件的最后,然后Ctrl+X->y>回车,完成保存:
+   ```
+   export PATH=YOUR_CUDA_PATH/bin:$PATH
+   export LD_LIBRARY_PATH=YOUR_CUDA_PATH/lib64:$LD_LIBRARY_PATH
+   ```
+   请把上面的**YOUR_CUDA_PATH**替换成你安装CUDA的路径,比如说CUDA装到了/usr/local/cuda9.0-cudnn7.1,那就把**YOUR_CUDA_PATH**换成**/usr/local/cuda9.0-cudnn7.1**  
+   >解释:
+    **PATH** 是ubuntu中搜索执行程序/软件的目录列表,通过它告诉其他软件CUDA的路径
+    **LD_LIBRARY_PATH** 是ubuntu中搜索lib库的目录列表,通过它告诉其他软件CUDA的lib库路径
+
+    以上修改完成之后,关闭掉现在的Xshell窗口,重新开一个Xshell,修改就会生效
+    >提示:
+    输入命令env可以查看目前生效的所有的系统变量
+    输入命令echo 变量名 可以查看指定的系统变量的值
+    .bashrc是隐藏文件,Winscp中可能看不到,在Xshell中输入ls -a,可以看到隐藏文件
+
+### Pycharm设置  
+Pycharm的PATH按照如下图的方式设置:  
+-->点击Pycharm上方菜单栏中的"Run"  
+-->"Edit Configurations.."  
+-->在弹出的"Run/Debug Configurations"框中的左侧栏点击Defaults,并选择下面的Python  
+-->点击框右侧"Environment Variables"右边的'**...**',打开系统变量设置框  
+-->点击设置框右上角的'**+**'依次添加环境变量PATH和LD_LIBRARY_PATH,左侧填变量名,右侧填路径(与.bashrc或/etc/profile的路径一样)  
+
+
+![Pycahrm PATH设置](../../img/part2/pycharm-path-setting.png)  
