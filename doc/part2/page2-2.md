@@ -95,7 +95,7 @@ Install the CUDA 9.0 Toolkit?
   问是否要安装CUDA-9.0,不然呢,毫无理由拒绝,输入 **`y`**    
 ```
 Enter Toolkit Location
-[ default is /usr/local/cuda-9.0 ]:
+\[ default is /usr/local/cuda-9.0 \]:
 ```
 
 sdasdsad
