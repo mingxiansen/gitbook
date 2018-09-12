@@ -45,14 +45,21 @@ Pycharm一共有三种版本:
 ### 使用Pycharm
 
 初次打开Pycharm，需要自行设置:  
-1.创建python project，并且指定工程的存放目录  
+1.创建python project，并且指定工程的存放目录(不建议放在默认位置,最好自己制定一个专门放代码的目录)  
 2.顺便再选择一下本机的Python解释器  
 整个过程比较简单，就不说了
 
-### 配置远程代码同步
+#### 配置远程代码同步
 
 想要在服务器上运行.py文件，我们先得把.py文件传过去  
-Pycharm内置了同步工程文件的功能，我们来配置一下:  
+Pycharm内置了同步工程文件的功能，我们来配置一下
+
+##### 在服务器创建一个存放代码的文件夹
+假如说放代码的文件夹叫做pycode
+输如下面的命令创建文件夹:
+`mkdir ~/pycde`
+
+##### 在Pycharm中新建远程服务器
 如下图所示，按照以下步骤操作:  
 -&gt;点击Pycharm菜单栏的"Tools"  
 -&gt;"Deployment"  
@@ -81,9 +88,17 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 > 如果你一脸懵逼，不要慌，只要把上面的username换成自己的就好
 
 3.ubuntu账户信息，并且勾上保存密码  
-填完之后点击右侧的"Test SFTP connection"，通过之后表示配置成功，保存即可
+填完之后点击右侧的"Test SFTP connection"，通过之后继续下面的操作
+
+**设置路径映射**  
+通过点击切换页面中的"Mappings",进入到路径映射的设置界面  
+在"Deployment path on server"中填入"/"
+
+![pycharm-路径映射](../../img/part1/pycharm-route.png)  
 
 上面的信息填完，保存完成后，Pycharm就可以与服务器之间进行文件同步了  
+
+##### 打开自动同步  
 为了更加方便，我们打开Pycharm的**自动同步**功能，每当你修改了文件，Pycharm就会自动上传，保证服务器端的代码是最新状态  
 具体按照以下步骤操作:  
 -&gt;点击Pycharm菜单栏的"Tools"  
@@ -93,12 +108,22 @@ Pycharm内置了同步工程文件的功能，我们来配置一下:
 
 ![sftp-设置自动上传](../../img/part1/sftp-autoupload.png)
 
+##### 最后的检查  
+最后我们需要检查一下是否成功设置了远程同步,方法是:  
+在Pycharm左侧的工程目录中,对工程目录的总文件夹点右键,看呼出的菜单中有没有"Deployment"->"Upload to xxx"这个选项  
+
+![pycharm-检查远程同步是否设置成功](../../img/part1/pycharm-uploadcheck.png)  
+
+有的话,点一下"Upload"把文件上传到服务器,以后就都是自动上传了  
+如果没有的话,请按照以上步骤仔细检查一下,是否有不一致或者遗漏的  
+
+
 > P.S.  
  代码同步功能可以配置多个Server(见上图左侧栏)，但同时只能使用一个  
  具体使用哪个是通过Deployment界面左上角从左往右第四个按钮"![sftp-useasdefault](../../img/part1/sftp-useasdefault.png)**Use as Default**"进行调整的  
  当前正在使用的Server也会有加粗提示
 
-### 配置远程python解释器
+#### 配置远程python解释器
 
 运行.py需要python解释器，Pycharm默认使用的是本地的解释器，这个可以自行设置  
 上一步，我们已经完成了从本地到服务器的代码同步，现在我们来让Pycharm找到位于服务器上的解释器  
