@@ -1,6 +1,10 @@
 # CUDA及相关软件的安装
 
-本节介绍的是NVIDIA显卡驱动、CUDA和cuDNN的安装，如果已经安装好这些软件，只是需要使用的话，请跳过所有的安装步骤，只看最下面的**系统变量设置**和**Pycharm设置**两个部分就好  
+本节配置以Tensorflow-gpu-1.10的CUDA环境为例(1.8/1.9/1.10要求相同)，根据上节的版本需求表，我们需要安装CUDA-9.0版本和cuDNN-7.1版本  
+
+本节介绍的是NVIDIA显卡驱动、CUDA和cuDNN的安装，如果已经安装好这些软件，只是需要使用的话，请跳过所有的安装步骤，只看最下面的**安装CUDA-设置系统变量**和**Pycharm设置**两个部分就好  
+
+**学弟学妹们注意,实验室已经给每台服务器安装好了CUDA9.0和cuDNN7.1,路径是/usr/local/cuda9.0-cudnn7.1,如果只是想使用Tensorflow1.10的话,请跳过安装步骤,完成上面提示的配置步骤就好**  
 
 ### 安装NVIDIA显卡驱动
 **重要!**  
@@ -64,11 +68,11 @@
 #####安装CUDA
   把下载好的CUDA本体和Patch用Winscp上传到服务器，放到用户根目录下(~/)即可  
   然后使用Xshell连入服务器，登录**有管理员权限的账户**  
-  输入下面的命令
-  `sudo sh **$CUDA_PATH**`
-  **$CUDA_PATH** 指的是CUDA安装文件的路径
-  cuda安装文件名大概类似于cuda_(version*)linux.run，假如放在了/home/xx下面，那么命令就是  
-  sudo sh /home/xx/cuda_(version*)linux.run  
+  输入下面的命令  
+  `sudo sh **$CUDA_PATH**`  
+  **$CUDA_PATH** 指的是CUDA安装文件的路径  
+  cuda安装文件名大概类似于cuda_(version\*)linux.run，假如放在了/home/xx下面，那么命令就是  
+  sudo sh \/home\/xx\/cuda_(version*)linux.run  
 
   之后会让你输入一遍管理员的密码
   这时候回看到安装前的说明，我们就不看了，按住"空格键"会不断往下翻页，到达100%后松手，会看到:  
@@ -187,6 +191,6 @@ Pycharm的PATH按照如下图的方式设置:
 -->在弹出的"Run/Debug Configurations"框中的左侧栏点击Defaults，并选择下面的Python  
 -->点击框右侧"Environment Variables"右边的'**...**'，打开系统变量设置框  
 -->点击设置框右上角的'**+**'依次添加环境变量PATH和LD_LIBRARY_PATH，左侧填变量名，右侧填路径(与.bashrc或/etc/profile的路径一样)  
-
+**注意,这里的PATH不要忘记最后的"/bin"**
 
 ![Pycahrm PATH设置](../../img/part2/pycharm-path-setting.png)  

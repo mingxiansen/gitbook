@@ -36,4 +36,7 @@ CUDA和cuDNN有不同版本，我们需要跟剧使用的机器学习框架选�
 
 ![Tensorflow Cuda需求](../../img/part2/tensorflow-version.png)
 
-我们以Tensorflow-gpu-1.8为例，根据表，我们需要安装CUDA-9.0版本和cuDNN-7.1版本
+没有特殊需求的话,建议安装最新版,截止2018年9月12号,Tensorflow最新版是1.10,虽然上面的图片没有显示它的CUDA版本要求,其实是和1.8一样的,都是CUDA9.0和cuDNN7.1  
+
+这个教程的目的是帮助大家从零配置最新版本的Tensorflow环境,下一节讲解如何安装CUDA和cuDNN  
+**但是需要注意的是,目前实验室的三台服务器都安装了cuda9和cuDNN7.1,路径都是/usr/local/cuda9.0-cudnn7.1,新来的学弟学妹可以不用自己安装CUDA和cuDNN了,跳过安装步骤,直接看最后的配置步骤就可以**
