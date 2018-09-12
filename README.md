@@ -6,8 +6,8 @@
   * [配置python环境](doc/part1/page1-2.md)
   * [使用服务器跑程序](doc/part1/page1-3.md)
 * [GPU加速环境配置](doc/part2/README.md)
-  * [GPU加速相关软件介绍](doc/part2/page2-1.md)
-  * [CUDA及相关软件的安装](doc/part2/page2-2.md)
+  * [GPU加速软件介绍](doc/part2/page2-1.md)
+  * [GPU加速软件安装](doc/part2/page2-2.md)
 
 <!-- ### 总目录 -->
 

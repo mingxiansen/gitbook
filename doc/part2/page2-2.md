@@ -1,4 +1,4 @@
-# CUDA及相关软件的安装
+# GPU加速软件安装
 
 本节配置以Tensorflow-gpu-1.10的CUDA环境为例(1.8/1.9/1.10要求相同)，根据上节的版本需求表，我们需要安装CUDA-9.0版本和cuDNN-7.1版本  
 
@@ -6,7 +6,7 @@
 
 **学弟学妹们注意,实验室已经给每台服务器安装好了CUDA9.0和cuDNN7.1,路径是/usr/local/cuda9.0-cudnn7.1,如果只是想使用Tensorflow1.10的话,请跳过安装步骤,完成上面提示的配置步骤就好**  
 
-### 安装NVIDIA显卡驱动
+## 安装NVIDIA显卡驱动
 **重要!**  
 在安装NVIDIA驱动前，请先确定服务器没有安装NVIDIA驱动，或者驱动不正常.  
 使用命令  
@@ -20,12 +20,12 @@
 如果提示找不到驱动或GPU设备，再请继续参考下面的安装教程.
 
 总共介绍NVIDIA显卡驱动的三种方法，推荐使用第一种：
-#####方法1:GUI操作  
+###方法1:GUI操作  
   登录服务器的桌面进行操作，出错的情况比较少，推荐
   首先确定服务器配置好[ubuntu清华源](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)或其他国内源后  
   进桌面->软件和更新->附加驱动->选择使用nvidia专用驱动->应用设置->等待安装完成  
 
-#####方法2:官网下载，手动安装
+###方法2:官网下载，手动安装
     从[nvidia官网](https://www.nvidia.cn/Download/index.aspx?lang=cn)下载驱动，手动安装
     使用Xshell连入服务器，登录**有管理员权限的账户**，依次输入下面的命令
     ```
@@ -40,11 +40,11 @@
     sudo service lightdm restart
     ```  
 
-#####方法3:安装CUDA时顺便安装
+###方法3:安装CUDA时顺便安装
    使用cuda.run中自带的驱动
    具体方法后面会介绍到
 
-### 安装CUDA
+## 安装CUDA
 **重要!**  
 在安装CUDA驱动前，请先确定服务器目前已安装的CUDA版本，以免覆盖已安装的CUDA或者重复安装  
 确认的方法:  
@@ -56,7 +56,7 @@
 
 本次教程以安装CUDA-9.0和cuDNN7.1为例，如果要安装其他版本，请注意进行适当的改动(下载的文件，命令中的文件名等)
 
-#####下载CUDA
+###下载CUDA
   首先去[这里](https://developer.nvidia.com/cuda-toolkit-archive)找到要安装的CUDA版本，点进去进入下图所示的下载界面
 
   ![CUDA-9.0下载界面](../../img/part2/cuda-downloadpage.png)
@@ -65,7 +65,7 @@
   图中下方1.6GB的文件是CUDA9.0的本体，还有后面的Patch也要全部下载下来.可能你选择的CUDA版本没有提供额外的Patch下载，那就不用下载了.另外下载前可能需要注册账号登录(我不太清楚了).
 
 
-#####安装CUDA
+###安装CUDA
   把下载好的CUDA本体和Patch用Winscp上传到服务器，放到用户根目录下(~/)即可  
   然后使用Xshell连入服务器，登录**有管理员权限的账户**  
   输入下面的命令  
@@ -133,7 +133,7 @@
 
   这是CUDA告诉我们，虽然CUDA文件安装成功了，但是需要你自行设置两个系统变量 **\$PATH** 和 **\$LD_LIBRARY_PATH** ，我们先安装cuDNN，稍后设置这个
 
-#####安装cuDNN
+###安装cuDNN
   严格来说不算是"安装"，我们只需要吧cuDNN复制到CUDA目录下就好  
   那么首先[点这里](https://developer.nvidia.com/rdp/cudnn-archive)下载对应版本的cudnn，没记错的话需要注册个账号，填一个问卷才能下载  
   需要注意的是cuDNN的版本也需要跟你安装的CUDA匹配，我们之前说要安装CUDA9.0和cuDNN7.1，所以我选择  
@@ -152,7 +152,7 @@
    /usr/local/cuda9.0-cudnn7.1/表示CUDA文件所在目录  
    请根据自己的情况酌情修改  
 
-#####设置系统变量(根据情况选择)
+###设置系统变量(根据情况选择)
    恭喜，完成上面的123步骤，你已经成功把CUDA和cuDNN安装到了服务器上，但是使用.run文件安装CUDA和cuDNN之后，机器学习框架(tensorflow/pytorch等)不能知道它们的所在位置，还需要你继续设置一下系统变量.
 
    软件读取系统变量的方式，稍微有些复杂，简单来说，系统变量由两个文件控制:
@@ -194,3 +194,25 @@ Pycharm的PATH按照如下图的方式设置:
 **注意,这里的PATH不要忘记最后的"/bin"**
 
 ![Pycahrm PATH设置](../../img/part2/pycharm-path-setting.png)  
+
+## python机器学习框架安装
+### Tensorflow安装
+首先激活之前配置的python虚拟环境,假设虚拟环境路径是`~/pyenv`  
+输入以下命令激活环境:  
+`source ~/pyenv/bin/activate`  
+输入之后,如果看到有`(xxxx)`这样的前缀在命令输入符号之前,就说明激活成功  
+接着输入  
+`pip install tensorflow-gpu`
+安装最新支持GPU的tensorflow  
+如果要安装指定版本,输入下面的命令(version是版本号. e.g. 1.0 / 1.8 / 1.10):  
+`pip install tensorflow-gpu==version`  
+
+### Pytorch安装
+请进入[官网](https://pytorch.org/),根据自己的选择,按照官方说明安装  
+例如,选择:  
+OS->Linux  
+Package Manager->pip  
+Python->3.5
+CUDA->9.0
+之后,会提示你输入下面的命令安装Pytorch:  
+`pip3 install torch torchvision`  
