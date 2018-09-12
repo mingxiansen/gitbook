@@ -69,10 +69,10 @@
   把下载好的CUDA本体和Patch用Winscp上传到服务器，放到用户根目录下(~/)即可  
   然后使用Xshell连入服务器，登录**有管理员权限的账户**  
   输入下面的命令  
-  `sudo sh **$CUDA_PATH**`  
+  `sudo sh $CUDA_PATH`  
   **$CUDA_PATH** 指的是CUDA安装文件的路径  
-  cuda安装文件名大概类似于cuda_(version\*)linux.run，假如放在了/home/xx下面，那么命令就是  
-  sudo sh \/home\/xx\/cuda_(version*)linux.run  
+  cuda安装文件名大概类似于cuda_(version*)linux.run，假如放在了/home/xx下面，那么命令就是  
+  sudo sh /home/xx/cuda_(version*)linux.run  
 
   之后会让你输入一遍管理员的密码
   这时候回看到安装前的说明，我们就不看了，按住"空格键"会不断往下翻页，到达100%后松手，会看到:  
