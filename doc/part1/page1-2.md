@@ -40,7 +40,7 @@ python通过pip管理包，下载依赖包时需要使用网络
 
 ```text
 mkdir ~/.config/pip
-nano ~/.config/pip/pip.config
+nano ~/.config/pip/pip.conf
 ```
 
 以上命令会打开文本编辑器，把下面的文字复制进去--&gt;Ctrl+X--&gt;y--&gt;回车，即可完成保存
