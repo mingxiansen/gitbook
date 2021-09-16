@@ -40,7 +40,7 @@ Pycharm一共有三种版本:
 | **专业版** | √ | √ |  | 付费/**学生免费** |
 | 教育版 | √ | √ | √ | 付费/学生免费 |
 
-其中教学套件我们不需要，为了使用后面会介绍的远程调试，代码同步等功能，请下载 [**专业版**](http://www.jetbrains.com/pycharm/download/) ，然后通过学校邮箱[申请专业版的免费License ](http://www.jetbrains.com/student/)(2021.9更新：北理的邮箱不能直接申请教育认证了，需要官方人工认证，大概需要两周，有钱请支持正版，~~没钱建议使用破解版~~)
+其中教学套件我们不需要，为了使用后面会介绍的远程调试，代码同步等功能，请下载 [**专业版**](http://www.jetbrains.com/pycharm/download/) ，然后通过学校邮箱[申请专业版的免费License ](http://www.jetbrains.com/student/)(2021.9更新：北理的邮箱现在不能直接申请教育认证了，需要走官方人工认证，上传学生证成绩单什么的，大概需要两周，~~嫌麻烦or没钱建议使用破解版~~)
 
 ## 初次使用Pycharm
 
@@ -131,9 +131,12 @@ Pycharm内置了同步工程文件的功能，我们来配置一下
 -&gt;点击Pycharm左上角的"File"  
 -&gt;"Settings"  
 -&gt;展开Settings左侧的Projec:XXX  
--&gt;Project Interpreter  (macOS版pycharm的settings在右下角->interpreter settings->SSH interpreter）
+-&gt;Project Interpreter   
 -&gt;点击右侧界面中最右侧的齿轮按钮  
--&gt;"Add Remote"  
+-&gt;"Add Remote" 
+
+(macOS版pycharm的settings在右下角->interpreter settings->SSH interpreter->...）
+
 之后会看到如下图的python远程解释器配置界面  
 
 ![pycharm-设置远程解释器](../../img/part1/pycharm-interpreter.png)  
