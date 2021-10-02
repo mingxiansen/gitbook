@@ -8,8 +8,8 @@
 ## 使用SSH
 
 借助SSH客户端，使用服务器资源跑程序，大致分以下几个步骤:  
-1.把需要运行的.py文件先用Winscp上传到服务器  
-2.启动SSE客户端(Xshell)连接到服务器  
+1.把需要运行的.py文件先用Winscp/Royal TSX(SFTP)上传到服务器  
+2.启动SSH客户端(Xshell/Royal TSX)连接到服务器  
 3.激活虚拟环境(source ~/.../activate)  
 4.python xx.py
 
@@ -40,7 +40,7 @@ Pycharm一共有三种版本:
 | **专业版** | √ | √ |  | 付费/**学生免费** |
 | 教育版 | √ | √ | √ | 付费/学生免费 |
 
-其中教学套件我们不需要，为了使用后面会介绍的远程调试，代码同步等功能，请下载 [**专业版**](http://www.jetbrains.com/pycharm/download/) ，然后通过学校邮箱[申请专业版的免费License ](http://www.jetbrains.com/student/)
+其中教学套件我们不需要，为了使用后面会介绍的远程调试，代码同步等功能，请下载 [**专业版**](http://www.jetbrains.com/pycharm/download/) ，然后通过学校邮箱[申请专业版的免费License ](http://www.jetbrains.com/student/)(2021.9更新：北理的邮箱现在不能直接申请教育认证了，需要走官方人工认证，上传学生证成绩单什么的，大概需要两周，~~嫌麻烦or没钱建议使用破解版~~)
 
 ## 初次使用Pycharm
 
@@ -75,7 +75,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下
 ![sftp-添加Server](../../img/part1/sftp-addServer.png)
 
 确定后，进入刚才创建的Server的详细配置界面  
-
+ 
 ![sftp-补充Server详细信息](../../img/part1/sftp-addInfo.png)  
 
 按照红框从上到下顺序依次填入:  
@@ -101,7 +101,7 @@ Pycharm内置了同步工程文件的功能，我们来配置一下
 ### 打开自动同步  
 为了更加方便，我们打开Pycharm的**自动同步**功能，每当你修改了文件，Pycharm就会自动上传，保证服务器端的代码是最新状态  
 具体按照以下步骤操作:  
--&gt;点击Pycharm菜单栏的"Tools"  
+-&gt;点击Pycharm菜单栏的"Tools" 
 -&gt;"Deployment"  
 -&gt;"Options"  
 -&gt;"Upload changed files automatically to the default server"选项改为"Always"  
@@ -131,9 +131,12 @@ Pycharm内置了同步工程文件的功能，我们来配置一下
 -&gt;点击Pycharm左上角的"File"  
 -&gt;"Settings"  
 -&gt;展开Settings左侧的Projec:XXX  
--&gt;Project Interpreter  
+-&gt;Project Interpreter   
 -&gt;点击右侧界面中最右侧的齿轮按钮  
--&gt;"Add Remote"  
+-&gt;"Add Remote" 
+
+(macOS版pycharm的settings在右下角->interpreter settings->SSH interpreter->...）
+
 之后会看到如下图的python远程解释器配置界面  
 
 ![pycharm-设置远程解释器](../../img/part1/pycharm-interpreter.png)  
